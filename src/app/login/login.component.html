@@ -11,13 +11,13 @@
      <h2>Login</h2> 
      <div class="form"> 
       <div class="inputBox"> 
-       <input #name type="text" required> <i>Username</i> 
+       <input #name type="text" required id="login_name"> <i>Username</i> 
       </div> 
       <div class="inputBox"> 
-       <input #password type="password" required> <i>Password</i> 
+       <input #password type="password" required id="password"> <i>Password</i> 
       </div> 
       <div class="inputBox"> 
-       <input (click)="login(name.value, password.value)" type="submit" value="Login"> 
+       <input (click)="login(name.value, password.value)" type="submit" value="Login" id="mandar_login"> 
       </div> 
       <p style="color:#0f0;">{{error}}</p>
      </div> 
