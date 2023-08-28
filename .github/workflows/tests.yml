@@ -1,1 +1,27 @@
-as
+name: Browserstack Test
+on:
+  pull_request:
+    types: [opened, reopened, ready_for_review]
+    branches: [main]
+
+jobs:
+  real_test:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: read repo
+      uses: actions/checkout@v3
+
+    - name: start nodejs
+      uses: actions/setup-node@v3
+      with: 
+        node-version: '18.15.0'
+
+    - name: instalar dependencias
+      run: npm ci
+
+    - name: buid & run
+      run: npm run dev&
+
+    - name: run test
+      run: npm run test-browserstack
