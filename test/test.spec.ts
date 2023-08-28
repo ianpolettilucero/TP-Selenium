@@ -2,7 +2,7 @@ import { By, Builder, WebDriver } from 'selenium-webdriver';
 import { describe, it, before, after, beforeEach } from 'mocha';
  
 
-const TESTING_URL = 'http://localhost:4200/login';
+const TESTING_URL = 'https://tp-pruscio-selenium-poletti-giercowski-2.onrender.com/login';
 const TESTING_BROWSER = 'chrome';
 const LOGIN_USERNAME = 'juan';
 const LOGIN_PASSWORD = '1234';
