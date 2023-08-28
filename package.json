@@ -6,7 +6,10 @@
     "start": "ng serve",
     "build": "ng build",
     "watch": "ng build --watch --configuration development",
-    "test": "ng test"
+    "build-test": "npx tsc test/*.ts",
+    "test": "npm run build-test && mocha",
+    "test-browserstack": "npm run build-test && browserstack-node-sdk mocha",
+    "postinstall": "npm update browserstack-node-sdk"
   },
   "private": true,
   "dependencies": {
